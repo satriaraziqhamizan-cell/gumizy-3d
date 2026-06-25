@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GUMIZY – Fixed Final</title>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      background: #0a0a0a;
+      color: #f0ede8;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      padding: 20px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #1e1e1e;
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #f0ede8;
+    }
+
+    .product-tag {
+      font-size: 11px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #555;
+      background: #141414;
+      border: 1px solid #222;
+      padding: 4px 12px;
+      border-radius: 20px;
+    }
+
+    .viewer-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    model-viewer {
+      width: 100%;
+      max-width: 520px;
+      height: 60vh;
+      min-height: 340px;
+      background: radial-gradient(ellipse at center, #1a1a1a 0%, #0a0a0a 100%);
+      border-radius: 16px;
+      border: 1px solid #1e1e1e;
+      --progress-bar-color: #c8f542;
+      --progress-mask: none;
+    }
+
+    .product-info {
+      margin-top: 24px;
+      text-align: center;
+    }
+
+    .product-name {
+      font-size: 22px;
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      color: #f0ede8;
+    }
+
+    .product-name span {
+      color: #c8f542;
+      font-weight: 700;
+    }
+
+    .product-sub {
+      font-size: 12px;
+      color: #444;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+
+    .hints {
+      margin-top: 16px;
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hint {
+      font-size: 11px;
+      color: #444;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .hint svg {
+      width: 14px;
+      height: 14px;
+      fill: #555;
+    }
+
+    footer {
+      padding: 16px 28px;
+      border-top: 1px solid #1a1a1a;
+      display: flex;
+      justify-content: center;
+    }
+
+    .ar-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #c8f542;
+      color: #0a0a0a;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border-radius: 40px;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    [slot="ar-button"] {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #c8f542;
+      color: #0a0a0a;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border-radius: 40px;
+      border: none;
+      cursor: pointer;
+      position: absolute;
+      bottom: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">GUMIZY</div>
+    <div class="product-tag">3D Viewer</div>
+  </header>
+
+  <div class="viewer-wrap">
+    <model-viewer
+      src="GUMIZY_Fixed_Final.glb"
+      alt="GUMIZY Fixed Final Stand-Up Pouch"
+      auto-rotate
+      camera-controls
+      ar
+      ar-modes="webxr scene-viewer quick-look"
+      shadow-intensity="1"
+      environment-image="neutral"
+      exposure="1"
+    >
+      <button slot="ar-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 3H3v2"/><path d="M19 3h2v2"/><path d="M5 21H3v-2"/><path d="M19 21h2v-2"/><path d="M12 7v5l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+        Lihat di AR
+      </button>
+    </model-viewer>
+
+    <div class="product-info">
+      <div class="product-name"><span>GUMIZY</span> Fixed Final</div>
+      <div class="product-sub">Stand-Up Pouch · 3D Model</div>
+      <div class="hints">
+        <div class="hint">
+          <svg viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2v-4M9 21H5a2 2 0 01-2-2v-4m0 0h18"/></svg>
+          Drag untuk memutar
+        </div>
+        <div class="hint">
+          <svg viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v3m0 0v3m0-3h3m-3 0H7"/></svg>
+          Pinch untuk zoom
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer></footer>
+
+</body>
+</html>
